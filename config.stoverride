@@ -27,16 +27,14 @@ dns: #!replace
     - https://dns.quad9.net/dns-query
   proxy-server-nameserver:
     - https://dns.google/dns-query
-  direct-nameserver:
-    - 1.1.1.1
-    - 8.8.8.8
+  direct-nameserver: []
+
   fallback:
     - https://dns.cloudflare.com/dns-query
     - https://dns.google/dns-query
     - https://dns.quad9.net/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
+  fallback-filter: {}
+
   fake-ip-filter:
     - '*.lan'
     - '*.local'
