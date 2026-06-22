@@ -1,0 +1,7 @@
+name: Test
+desc: Test
+version: 1.0
+
+#!override
+
+log-level: debug
