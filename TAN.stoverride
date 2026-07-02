@@ -158,9 +158,9 @@ rules: #!replace
   - DOMAIN-KEYWORD,pstatp,🇺🇸 USA_Primary
   - DOMAIN-KEYWORD,bytedance,🇺🇸 USA_Primary
   #Remote rule set
-  - RULE-SET,Advertising,REJECT
-  - RULE-SET,Privacy,REJECT
-  - RULE-SET,ChinaMax,DIRECT
+ #- RULE-SET,Advertising,REJECT
+ #- RULE-SET,Privacy,REJECT
+ #- RULE-SET,ChinaMax,DIRECT
 
   #Bottom-up strategy
   - GEOIP,LAN,DIRECT
