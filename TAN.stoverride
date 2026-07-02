@@ -36,8 +36,10 @@ dns: #!replace
     - https://dns.google/dns-query
     - https://dns.quad9.net/dns-query
   proxy-server-nameserver:
+    - 1.1.1.1
+    - https://8.8.8.8/dns-query
     - https://dns.google/dns-query
-  direct-nameserver: []
+  direct-nameserver: {}
 
   fallback:
     - https://dns.cloudflare.com/dns-query
