@@ -1,10 +1,12 @@
 name: Stash Ednovas Override
-
 desc: |-
-  Personal Stash Override
   DNS · Proxy Groups · Rules
-  Ednovas｛DNS-CN｝IPV6/IPV4
-  Proxy-Gate{USA/SG/Custom-Gate}
+  Encrypted DNS:
+    - DoH (DoH-CN) IPv6/IPv4
+  Policy Groups:
+    - Proxy-Gate {USA/SG/Custom-Gate}
+  Rules:
+    - CN / Global
 
 version: 3.0 / 03-07-2026
 
