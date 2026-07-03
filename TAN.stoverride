@@ -40,12 +40,13 @@ dns: #!replace
     - https://dns.google/dns-query
     - https://dns.quad9.net/dns-query
     - https://dns.alidns.com/dns-query
-    - 8.8.8.8
 
   proxy-server-nameserver:
     - https://edge.microsoft.com/dns-query
     - https://dns.google/dns-query
     - https://dns.cloudflare.com/dns-query
+    - 233.5.5.5
+    - 4.2.2.1
 
 
   direct-nameserver: {}
@@ -56,7 +57,11 @@ dns: #!replace
     - https://dns.google/dns-query
     - https://dns.quad9.net/dns-query
 
-  fallback-filter: {}
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
 
   fake-ip-filter:
     - '*.lan'
