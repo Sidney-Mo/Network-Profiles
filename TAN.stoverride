@@ -15,7 +15,7 @@ allow-lan: true
 bind-address: '*'
 mode: rule
 log-level: info
-external-controller: '127.0.0.1:9090'
+external-controller: ':9090'
 unified-delay: true
 tcp-concurrent: true
 
@@ -26,19 +26,24 @@ dns: #!replace
   prefer-h3: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+
   default-nameserver:
+    - 223.5.5.5
     - 1.1.1.1
     - 8.8.8.8
     - 2606:4700:4700::1111
     - 2606:4700:4700::1001
+
   nameserver:
     - https://edge.microsoft.com/dns-query
     - https://dns.cloudflare.com/dns-query
     - https://dns.google/dns-query
     - https://dns.quad9.net/dns-query
+
   proxy-server-nameserver:
     - https://edge.microsoft.com/dns-query
     - https://dns.google/dns-query
+
   direct-nameserver: {}
 
   fallback:
@@ -46,6 +51,7 @@ dns: #!replace
     - https://dns.cloudflare.com/dns-query
     - https://dns.google/dns-query
     - https://dns.quad9.net/dns-query
+
   fallback-filter: {}
 
   fake-ip-filter:
@@ -53,6 +59,7 @@ dns: #!replace
     - '*.local'
     - '*.msftconnecttest.com'
     - '*.msftncsi.com'
+
     - stun.*
 
 profile: #!replace
