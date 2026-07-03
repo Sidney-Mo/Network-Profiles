@@ -1,10 +1,14 @@
 name: Stash Override
 
 desc: |-
-  Personal Stash Override
-  DNS · Proxy Groups · Rules
-  IPV6/IPV4
-  Proxy-Gate{USA/SG/Custom-Gate}
+  [[DNS · Proxy Groups · Rules]]
+
+  Encrypted DNS:
+   - DoH IPv6/IPv4
+  Policy Groups:
+   - Proxy-Gate {USA/SG/Custom-Gate}
+  Rules:
+   - CN / Global
 
 version: 1.0/03-07-2026
 
