@@ -73,6 +73,7 @@ dns: #!replace
     - 'pemby.ednovas.org'
     - 'shh.ysqhq.top'
     - 'dde.ysqhq.top'
+    - 'eee.ysqhq.top'
     - stun.*
 
 profile: #!replace
