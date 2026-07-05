@@ -1,8 +1,8 @@
-name: Stash Override JR
+name: Stash Override
 
 desc: |-
-  [[DNS · Proxy Groups · Rules]]
-
+  DNS · Proxy Groups · Rules
+  Version: 1.0    05-07-2026
   Encrypted DNS:
    - DoH IPv6/IPv4
   Policy Groups:
@@ -48,11 +48,13 @@ dns: #!replace
 
   proxy-server-nameserver:
     - https://edge.microsoft.com/dns-query
-    - https://dns.google/dns-query
     - https://dns.cloudflare.com/dns-query
+    - https://dns.google/dns-query
     - https://dns.alidns.com/dns-query
 
-  direct-nameserver: {}
+  direct-nameserver:
+    - 223.5.5.5
+    - 223.6.6.6
 
   fallback:
     - https://edge.microsoft.com/dns-query
@@ -71,9 +73,6 @@ dns: #!replace
     - '*.local'
     - '*.msftconnecttest.com'
     - '*.msftncsi.com'
-    - 'pemby.ednovas.org'
-    - 'shh.ysqhq.top'
-    - 'dde.ysqhq.top'
     - stun.*
 
 profile: #!replace
@@ -135,7 +134,8 @@ rules: #!replace
   - DST-PORT,993,DIRECT
   - DST-PORT,995,DIRECT
 
-  # --- Apple ---
+  #==================#
+  # Apple
   # Basic connection and time
   - DOMAIN,time.apple.com,DIRECT
   - DOMAIN,captive.apple.com,DIRECT
@@ -162,7 +162,6 @@ rules: #!replace
   - DOMAIN-KEYWORD,buy.itunes,Proxy-Gate
   - DOMAIN,bag.itunes.apple.com,Proxy-Gate
   - DOMAIN,storekit.itunes.apple.com,Proxy-Gate
-
   #Microsoft
   - DOMAIN-KEYWORD,copilot,Proxy-Gate
   - DOMAIN-SUFFIX,bing.com,Proxy-Gate
@@ -199,6 +198,30 @@ rules: #!replace
   - DOMAIN-KEYWORD,byteimg,Proxy-Gate
   - DOMAIN-KEYWORD,pstatp,Proxy-Gate
   - DOMAIN-KEYWORD,bytedance,Proxy-Gate
+  #Wechat
+  - DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+  - DOMAIN-SUFFIX,wechat.com,DIRECT
+  - DOMAIN-SUFFIX,wx.qq.com,DIRECT
+  - DOMAIN-SUFFIX,wxapp.qq.com,DIRECT
+  - DOMAIN-SUFFIX,work.weixin.qq.com,DIRECT
+  - DOMAIN-SUFFIX,res.wx.qq.com,DIRECT
+  #Meituan
+  - DOMAIN-SUFFIX,meituan.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.net,DIRECT
+  - DOMAIN-SUFFIX,sankuai.com,DIRECT
+  - DOMAIN-SUFFIX,meituanwaimai.com,DIRECT
+  - DOMAIN-SUFFIX,meituanzhongbao.com,DIRECT
+  #Kugou
+  - DOMAIN-SUFFIX,kugou.com,DIRECT
+  - DOMAIN-SUFFIX,kugou.net,DIRECT
+  - DOMAIN-SUFFIX,kgimg.com,DIRECT
+  - DOMAIN-SUFFIX,kglink.cn,DIRECT
+  - DOMAIN-SUFFIX,kugouaudio.com,DIRECT
+  - DOMAIN-SUFFIX,kugoustore.com,DIRECT
+  - DOMAIN-SUFFIX,kugouvoice.com,DIRECT
+  - DOMAIN-SUFFIX,kugouyouth.com,DIRECT
+  #==================#
+
   #Remote rule set
   - RULE-SET,Privacy,REJECT
   - RULE-SET,ChinaMax,DIRECT
