@@ -3,7 +3,6 @@ name: Stash Beta
 desc: |-
   Stash Override Beta Version
   DNS · Proxy Groups · Rules
-  Version: 1.0 05-07-2026
   Encrypted DNS:
    - DoH IPv6/IPv4
   Policy Groups:
