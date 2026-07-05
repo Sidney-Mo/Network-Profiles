@@ -54,7 +54,6 @@ dns: #!replace
 
   direct-nameserver: {}
 
-
   fallback:
     - https://edge.microsoft.com/dns-query
     - https://dns.cloudflare.com/dns-query
@@ -133,6 +132,7 @@ rules: #!replace
   - DST-PORT,993,DIRECT
   - DST-PORT,995,DIRECT
 
+  #==================#
   # Apple
   # Basic connection and time
   - DOMAIN,time.apple.com,DIRECT
@@ -218,8 +218,7 @@ rules: #!replace
   - DOMAIN-SUFFIX,kugoustore.com,DIRECT
   - DOMAIN-SUFFIX,kugouvoice.com,DIRECT
   - DOMAIN-SUFFIX,kugouyouth.com,DIRECT
-
-
+  #==================#
 
   #Remote rule set
   - RULE-SET,Privacy,REJECT
