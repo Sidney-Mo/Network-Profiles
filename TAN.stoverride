@@ -1,8 +1,8 @@
 name: Stash Override
 
 desc: |-
-  《DNS · Proxy Groups · Rules》
-
+  DNS · Proxy Groups · Rules
+  1.0
   Encrypted DNS:
    - DoH IPv6/IPv4
   Policy Groups:
