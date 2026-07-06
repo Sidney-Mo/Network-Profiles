@@ -1,4 +1,5 @@
 name: Stash FailSafe Override
+category: Production
 
 desc: |-
   DNS｜Proxy Groups｜Rules
