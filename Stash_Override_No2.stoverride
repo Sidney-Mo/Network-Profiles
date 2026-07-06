@@ -8,7 +8,10 @@ desc: |-
   Policy Groups:
    - PROXY-Gate {Custom-Gate/US/SG/HK/JP}
   Rules:
-   - Global / Customize / CN
+   - Customize / CN
+   - MATCH -> PROXY-Gate (Default Fallback)
+
+
 
 #!override
 
