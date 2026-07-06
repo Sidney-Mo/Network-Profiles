@@ -1,11 +1,11 @@
-name: Stash Cecilia Override
+name: Stash Core Override
 category: Production
 
 desc: |-
   DNS｜Proxy Groups｜Rules
   Version: 1.0｜2026-07-07
   Encrypted DNS:
-   - DoH/IPv6/IPv4
+   - DoH｜IPv6｜IPv4
   Policy Groups:
    - PROXY-Gate {Custom-Gate/US/SG/HK/JP}
   Rules:
