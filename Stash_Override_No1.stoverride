@@ -50,7 +50,7 @@ dns: #!replace
     - tls://8.8.8.8:853
     - tls://1.0.0.1:853
     - tls://8.8.4.4:853
-    - tls://9.9.9.9:
+    - tls://9.9.9.9:853
 
   direct-nameserver:
     - https://dns.alidns.com/dns-query
