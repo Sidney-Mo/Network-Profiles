@@ -269,11 +269,12 @@ rules: #!replace
   #=========End of custom rules=========#
 
   #Remote rule set
-  - RULE-SET,ChinaMax,DIRECT
   - RULE-SET,Privacy,REJECT
   - RULE-SET,BanAD,REJECT
   - RULE-SET,BanProgramAD,REJECT
   - RULE-SET,BanEasyList,REJECT
+  - RULE-SET,ChinaMax,DIRECT
+
 
   #Bottom-up strategy
   - GEOIP,LAN,DIRECT
