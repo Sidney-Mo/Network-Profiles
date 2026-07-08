@@ -1,1 +1,1 @@
-# Stash-config
+# Stash- iOS-config
