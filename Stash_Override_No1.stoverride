@@ -94,11 +94,24 @@ dns: #!replace
       - 240.0.0.0/4
 
   fake-ip-filter:
+  fake-ip-filter:
     - '*.lan'
     - '*.local'
+    - 'localhost'
     - '*.msftconnecttest.com'
     - '*.msftncsi.com'
-    - stun.*
+    - '*.msidentity.com'
+    - 'captive.apple.com'
+    - 'stun.*'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    - '+.weixin.com'
+    - '+.wechat.com'
+    - '+.qq.com'
+    - '+.tencent.com'
+    - 'speedtest.net'
 
 profile: #!replace
   store-selected: true
