@@ -12,9 +12,12 @@ Personal repository for network proxy configuration files and rulesets.
 ## 📁 Directory Structure
 
 * **Stash**: Contains custom override (`.stoverride`) configuration files for the Stash app.
-  * `Stash_Override_CN.stoverride`: Custom override configuration file specialized and optimized for the network environment in China.
-  * `Stash_Override_RU.stoverride`: Custom override configuration file specialized and optimized for the network environment in Russia.
-  * `Stash_Override_IR.stoverride`: Custom override configuration file specialized and optimized for the network environment in Iran.
+  * `Stash_Override_CN.stoverride`
+     Custom override configuration file specialized and optimized for the network environment in China.
+  * `Stash_Override_RU.stoverride`
+     Custom override configuration file specialized and optimized for the network environment in Russia.
+  * `Stash_Override_IR.stoverride`
+     Custom override configuration file specialized and optimized for the network environment in Iran.
 ## Private customized files
    ⚠️ Please do not use the following files. This is a customized version)
   * `Stash_Override_No1.stoverride`
@@ -41,9 +44,12 @@ Personal repository for network proxy configuration files and rulesets.
 ## 📁 目录结构说明
 
 * **Stash**：存放 Stash 软件的自定义覆写（`.stoverride`）配置文件。
-  * `Stash_Override_CN.stoverride`：专属定制覆写配置文件，针对中国网络环境与本地服务进行分流优化。
-  * `Stash_Override_RU.stoverride`：专属定制覆写配置文件，针对俄罗斯网络环境与本地服务进行分流优化。
-  * `Stash_Override_IR.stoverride`：专属定制覆写配置文件，针对伊朗网络环境与本地服务进行分流优化。
+  * `Stash_Override_CN.stoverride`
+     专属定制覆写配置文件，针对中国网络环境与本地服务进行分流优化。
+  * `Stash_Override_RU.stoverride`
+     专属定制覆写配置文件，针对俄罗斯网络环境与本地服务进行分流优化。
+  * `Stash_Override_IR.stoverride`
+     专属定制覆写配置文件，针对伊朗网络环境与本地服务进行分流优化。
 ## 私人定制文件
    ⚠️ 请不要使用以下配置文件！这是私人定制的版本。使用这些文件可能会出现错误！
   * `Stash_Override_No1.stoverride`
