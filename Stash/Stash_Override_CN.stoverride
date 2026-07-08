@@ -121,17 +121,23 @@ profile: #!replace
   store-selected: true
   store-fake-ip: true
 
+#---------------------------------------------------#
+# 策略组配置 (Proxy Groups)                          #
+#---------------------------------------------------#
 proxy-groups: #!replace
+  # 主控制网关组（核心分流默认由此策略组统一调度）
   - name: PROXY-Gate
     type: select
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Final.png
     proxies:
-      - 🌐 Global-Proxy
-      - 🇺🇸 US-Auto
-      - 🇸🇬 SG-Auto
-      - 🇭🇰 HK-Auto
-      - 🇯🇵 JP-Auto
-      - DIRECT
+      - 🌐 Global-Proxy  # 默认全局代理（包含所有节点）
+      - 🇺🇸 US-Auto       # 美国节点自动测速
+      - 🇸🇬 SG-Auto       # 新加坡节点自动测速
+      - 🇭🇰 HK-Auto       # 香港节点自动测速
+      - 🇯🇵 JP-Auto       # 日本节点自动测速
+      - 🇹🇼 TW-Auto       # 台湾节点自动测速
+      - 🇪🇺 EU-Manual     # 欧洲区域手动切换（英/德/法/俄）
+      - DIRECT            # 直连
 
   - name: 🌐 Global-Proxy
     type: select
@@ -173,6 +179,62 @@ proxy-groups: #!replace
     url: http://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
+
+  - name: 🇹🇼 TW-Auto
+    type: url-test
+    include-all: true
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Taiwan.png
+    filter: '(?i)(\[TW\]|^TW$|Taiwan|Taibei|\bTW\b|台湾|台北|台|🇹🇼)'
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+
+  # 欧洲组：大组手动选择国家，国家内部自动测速
+  - name: 🇪🇺 EU-Manual
+    type: select
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/European_Union.png
+    proxies:
+      - 🇬🇧 UK-Auto
+      - 🇩🇪 DE-Auto
+      - 🇫🇷 FR-Auto
+      - 🇷🇺 RU-Auto
+
+  - name: 🇬🇧 UK-Auto
+    type: url-test
+    include-all: true
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_Kingdom.png
+    filter: '(?i)(\[UK\]|^UK$|UK|United Kingdom|Britain|\bUK\b|英国|伦敦)'
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+
+  - name: 🇩🇪 DE-Auto
+    type: url-test
+    include-all: true
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Germany.png
+    filter: '(?i)(\[DE\]|^DE$|Germany|Deutschland|\bDE\b|德国|法兰克福)'
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+
+  - name: 🇫🇷 FR-Auto
+    type: url-test
+    include-all: true
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/France.png
+    filter: '(?i)(\[FR\]|^FR$|France|\bFR\b|法国|巴黎)'
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+
+  - name: 🇷🇺 RU-Auto
+    type: url-test
+    include-all: true
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Russia.png
+    filter: '(?i)(\[RU\]|^RU$|Russia|Russian|Federation|\bRU\b|俄罗斯|莫斯科|伯力)'
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+
 
 rules: #!replace
 
