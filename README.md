@@ -1,6 +1,10 @@
 # Network-Profiles
 
-Personal repository for network proxy configuration files and rulesets.
+This documentation is available in two languages: English | Chinese  
+本说明提供两种语言版本：英文版本->中文版本
+
+Personal repository for network proxy configuration files and rulesets.  
+(Special thanks to Ms. Cecilia for providing the VPS service used for testing.)
 
 ## 📁 Directory Structure
 
