@@ -3,6 +3,8 @@
 This documentation is available in two languages: English | Chinese  
 本说明提供两种语言版本：英文版本->中文版本
 
+## English：
+
 Personal repository for network proxy configuration files and rulesets.  
 (Special thanks to Ms. Cecilia for providing the VPS service used for testing.)
 
@@ -23,3 +25,26 @@ Personal repository for network proxy configuration files and rulesets.
     * `BanAD` / `BanProgramAD` rulesets (Sourced from the open-source project [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR))
     * `AdvertisingLite` / `ChinaMax` / `Privacy` rulesets (Sourced from the open-source project [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script))
   * **GEOIP Databases**: (Automatically updated via Stash's built-in mechanism)
+
+## 中文：
+
+个人专用的网络代理配置文件与规则集。  
+（特别感谢 Cecilia 女士提供测试用的 VPS 服务。）
+
+## 📁 目录结构说明
+
+* **Stash**：存放 Stash 软件的自定义覆写（`.stoverride`）配置文件。
+  * `Stash_Override_No1.stoverride`：主要覆写配置文件，针对日常使用进行优化。
+  * `Stash_Override_No2.stoverride`：第二套覆写配置文件，专为网络环境较差时设计。
+  * `Stash_Override_Test.stoverride`：测试专用配置文件，用于日常迭代、新规则调试与网络测试。
+  * `config.stoverride`：通用基础覆写备份文件。
+
+## ⚠️ 使用须知
+
+* 远程链接请使用 GitHub 生成的带有 `/refs/heads/main/` 路径的 Raw 直链。直接粘贴至 Stash 远程覆写中即可。
+* 本仓库配置仅供个人技术研究、网络优化与隐私防护使用。
+* 配置文件中的远程资源主要引用及致谢：
+  * **规则集**：
+    * `BanAD` / `BanProgramAD` 规则集（引自开源项目 [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)）
+    * `AdvertisingLite` / `ChinaMax` / `Privacy` 规则集（引自开源项目 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)）
+  * **GEOIP 数据库**：（Stash 内置自动更新机制）
