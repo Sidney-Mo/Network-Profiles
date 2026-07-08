@@ -30,6 +30,8 @@ Personal repository for network proxy configuration files and rulesets.
   * **Rulesets**:
     * `BanAD` / `BanProgramAD` rulesets (Sourced from the open-source project [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR))
     * `AdvertisingLite` / `ChinaMax` / `Privacy` rulesets (Sourced from the open-source project [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script))
+    * `IranMax` ruleset (Sourced from the open-source project [bootmortis/iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains))
+    * `IranIP` ruleset (Sourced from the open-source project [vfarid/iran-ip-cidr](https://github.com/vfarid/iran-ip-cidr))
   * **GEOIP Databases**: (Automatically updated via Stash's built-in mechanism)
 
 ## 中文：
@@ -57,6 +59,8 @@ Personal repository for network proxy configuration files and rulesets.
   * **规则集**：
     * `BanAD` / `BanProgramAD` 规则集（引自开源项目 [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)）
     * `AdvertisingLite` / `ChinaMax` / `Privacy` 规则集（引自开源项目 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)）
+    * `IranMax` 伊朗域名规则集（引自开源项目 [bootmortis/iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains)）
+    * `IranIP` 伊朗 IP 规则集（引自开源项目 [vfarid/iran-ip-cidr](https://github.com/vfarid/iran-ip-cidr)）
   * **GEOIP 数据库**：（Stash 内置自动更新机制）
 
 ## Русский:
@@ -84,6 +88,8 @@ Personal repository for network proxy configuration files and rulesets.
   * **Наборы правил**:
     * Наборы правил `BanAD` / `BanProgramAD` (Взято из открытого проекта [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR))
     * Наборы правил `AdvertisingLite` / `ChinaMax` / `Privacy` (Взято из открытого проекта [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script))
+    * Набор правил `IranMax` (Взято из открытого проекта [bootmortis/iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains))
+    * Набор правил `IranIP` (Взято из открытого проекта [vfarid/iran-ip-cidr](https://github.com/vfarid/iran-ip-cidr))
   * **Базы данных GEOIP**: (Автоматически обновляются с помощью встроенного механизма Stash)
 
 ## فارسی：
@@ -111,4 +117,6 @@ Personal repository for network proxy configuration files and rulesets.
   * **مجموعه‌قوانین**:
     * مجموعه‌قوانین `BanAD` / `BanProgramAD` (برگرفته از پروژه متن‌باز [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR))
     * مجموعه‌قوانین `AdvertisingLite` / `ChinaMax` / `Privacy` (برگرفته از پروژه متن‌باز [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script))
+    * مجموعه‌قوانین `IranMax` (برگرفته از پروژه متن‌باز [bootmortis/iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains))
+    * مجموعه‌قوانین `IranIP` (برگرفته از پروژه متن‌باز [vfarid/iran-ip-cidr](https://github.com/vfarid/iran-ip-cidr))
   * **پایگاه‌های داده GEOIP**: (به‌طور خودکار از طریق مکانیزم داخلی Stash به‌روزرسانی می‌شود)
