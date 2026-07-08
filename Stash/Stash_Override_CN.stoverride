@@ -2,17 +2,31 @@ Name: Stash CN Override
 category: Active
 
 desc: |-
-  DNS | Proxy Groups | Rules
-  Version: 1.3 | 2026-07-08
-  Encrypted DNS:
-   - DoH(DoT) | IPv6 | IPv4
-  Policy Groups:
-   - PROXY-Gate {Global-Proxy/US/SG/HK/JP}
-  Rules:
-   - Customized AI, Google, YouTube, Telegram & OneDrive
-   - Sourced from open-source rulesets (blackmatrix7 & ACL4SSR)
-   - MATCH -> PROXY-Gate (Default Fallback)
+Name: Stash Core Override
+category: Active
 
+desc: |-
+  [English]
+  DNS | Proxy Groups | Rules
+  Version: 1.4 | 2026-07-08
+  Encrypted DNS: DoH(DoT) | IPv6 | IPv4
+  Policy Groups: PROXY-Gate {Global/US/SG/HK/JP/TW/EU}
+  Rules: Customized AI, Google, YouTube, Telegram & OneDrive
+  MATCH -> PROXY-Gate (Default Fallback)
+  
+  [中文说明]
+  覆写配置（包含 DNS、策略组与规则分流）
+  版本: 1.4 | 2026-07-08
+  加密 DNS: 支持分流、IPv4/IPv6、DoH 与 DoT 混合解析
+  核心策略组: PROXY-Gate大组包括Global/美国/新加坡/香港/日本/台湾/欧洲分组
+  策略组说明: 
+    一般情况下，只需在PROXY-Gate大组里选择某个小组即可，
+    因为美国、新加坡、香港、日本、台湾小组采用自动测速，并且自动选择最快节点。
+    所以当选择某个地区小组后，不需要再选择地区小组里的某个具体节点。
+    欧洲小组不支持自动选择节点，因为大部分网络提供商的欧洲节点比较少，所以需要手动选择。
+  分流规则: 针对全球 AI 软件、谷歌、YouTube、Telegram 及网页版 OneDrive 进行了专项代理优化
+  兜底策略: 未匹配流量默认交由 PROXY-Gate大组里选择的分组处理
+  
 #!override
 
 mixed-port: 7890
