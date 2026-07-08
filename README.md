@@ -16,11 +16,11 @@ Personal repository for network proxy configuration files and rulesets.
   * `Stash_Override_RU.stoverride`: Custom override configuration file specialized and optimized for the network environment in Russia.
   * `Stash_Override_IR.stoverride`: Custom override configuration file specialized and optimized for the network environment in Iran.
 ## Private customized files
-  (Please do not use the following files. This is a customized version)
-  * `Stash_Override_No1.stoverride`: Primary override configuration file, optimized for daily use.
-  * `Stash_Override_No2.stoverride`: Secondary override configuration file, designated for poor network conditions.
-  * `Stash_Override_Test.stoverride`: Testing configuration file, utilized for ongoing iterations, rule debugging, and network testing.
-  * `config.stoverride`: General backup for the baseline override configuration.
+   ⚠️ Please do not use the following files. This is a customized version)
+  * `Stash_Override_No1.stoverride`
+  * `Stash_Override_No2.stoverride`
+  * `Stash_Override_Test.stoverride`
+  * `config.stoverride`
 
 ## ⚠️ Terms of Use
 
@@ -45,10 +45,11 @@ Personal repository for network proxy configuration files and rulesets.
   * `Stash_Override_RU.stoverride`：专属定制覆写配置文件，针对俄罗斯网络环境与本地服务进行分流优化。
   * `Stash_Override_IR.stoverride`：专属定制覆写配置文件，针对伊朗网络环境与本地服务进行分流优化。
 ## 私人定制文件
-  * `Stash_Override_No1.stoverride`：主要覆写配置文件，针对日常使用进行优化。
-  * `Stash_Override_No2.stoverride`：第二套覆写配置文件，专为网络环境较差时设计。
-  * `Stash_Override_Test.stoverride`：测试专用配置文件，用于日常迭代、新规则调试与网络测试。
-  * `config.stoverride`：通用基础覆写备份文件。
+   ⚠️ 请不要使用以下配置文件！这是私人定制的版本。使用这些文件可能会出现错误！
+  * `Stash_Override_No1.stoverride`
+  * `Stash_Override_No2.stoverride`
+  * `Stash_Override_Test.stoverride`
+  * `config.stoverride`
 
 ## ⚠️ 使用须知
 
