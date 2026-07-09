@@ -7,7 +7,7 @@ desc: |-
   Encrypted DNS:
    - DoH(DoT)｜IPv6｜IPv4
   Policy Groups:
-   - PROXY-Gate {Custom-Gate/US/SG/HK/JP}
+   - PROXY-Gate｛Custom/US/SG/HK/JP/EUR(UK-DE-FR-RU)}
   Rules:
    - Customize｜CN
    - MATCH -> PROXY-Gate (Default Fallback)
