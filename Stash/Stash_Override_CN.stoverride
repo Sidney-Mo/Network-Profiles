@@ -1,14 +1,14 @@
-Name: Stash CN Override
+name: Stash CN Override
 category: Active
 
 desc: |-
-  [English]
   DNS | Proxy Groups | Rules
   Version: 1.4 | 2026-07-08
   Encrypted DNS: DoH(DoT) | IPv6 | IPv4
   Policy Groups: PROXY-Gate {Global/US/SG/HK/JP/TW/EU}
   Rules: Customized AI, Google, YouTube, Telegram & OneDrive
   MATCH -> PROXY-Gate (Default Fallback)
+
   [中文说明]
   📌 适用环境: 适用于中国大陆地区用户在 iPhone / iPad 的 Stash App 上使用。
   ⚙️ 核心配置: 包含加密 DNS 解析、全球多区域策略组及流量分流规则。
@@ -17,12 +17,11 @@ desc: |-
    - [PROXY-Gate 主控制组]：包含 Global、美国、新加坡、香港、日本、台湾、欧洲等分组。
    - [自动测速组]：美国、新加坡、香港、日本、台湾小组均支持“自动测速并自动选择最优节点”。
      💡 使用提示：在 PROXY-Gate 主控制组中勾选对应的地区小组即可，无需再去小组内部手动挑选具体节点。
-   - [欧洲地区组]：由于多数情况下欧洲节点较少，该组被设计为“自动测速、手动选择”模式。
-      如果你需要使用欧洲地区组，请在 PROXY-Gate 组里选择 欧洲地区组 再选择某个欧洲国家组即可。
+
+   - [欧洲地区组]：由于多数情况下欧洲节点较少，该组被设计为“自动测速、手动选择”模式。如果你需要使用欧洲地区组，请在 PROXY-Gate 组里选择 欧洲地区组 再选择某个欧洲国家组即可。
   
   ⚡ 分流与兜底:
-   - 规则分流：针对全球主流 AI 软件、谷歌、YouTube、Telegram 及网页版 OneDrive 进行了专项代理优化。  
-             命中 ChinaMax中国大陆规则集 的域名将默认直连。
+   - 规则分流：针对全球主流 AI 软件、谷歌、YouTube、Telegram 及网页版 OneDrive 进行了专项代理优化。命中 ChinaMax中国大陆规则集 的域名将默认直连。
    - 兜底策略：所有未命中规则的剩余流量，默认交由你在 PROXY-Gate 大组中所选的分组或节点来处理。
 
 #!override
