@@ -34,6 +34,7 @@ dns: #!replace
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
+    - system
 
   nameserver:
     - https://dns.cloudflare.com/dns-query
@@ -69,28 +70,28 @@ dns: #!replace
     'dns.alidns.com': [223.5.5.5, 223.6.6.6]
     'doh.pub': [1.12.12.12, 120.53.53.53]
     #WeChat
-    '+.weixin.com': [https://dns.alidns.com/dns-query]
-    '+.wechat.com': [https://dns.alidns.com/dns-query]
-    '+.qq.com': [https://dns.alidns.com/dns-query]
-    '+.tencent.com': [https://dns.alidns.com/dns-query]
-    '+.qpic.cn': [https://dns.alidns.com/dns-query]
-    '+.wx.qq.com': [https://dns.alidns.com/dns-query]
-    '+.wxapp.qq.com': [https://dns.alidns.com/dns-query]
+    '+.weixin.com': ['https://dns.alidns.com/dns-query']
+    '+.wechat.com': ['https://dns.alidns.com/dns-query']
+    '+.qq.com': ['https://dns.alidns.com/dns-query']
+    '+.tencent.com': ['https://dns.alidns.com/dns-query']
+    '+.qpic.cn': ['https://dns.alidns.com/dns-query']
+    '+.wx.qq.com': ['https://dns.alidns.com/dns-query']
+    '+.wxapp.qq.com': ['https://dns.alidns.com/dns-query']
     #MeiTuan
-    '+.meituan.com': [https://dns.alidns.com/dns-query]
-    '+.meituan.net': [https://dns.alidns.com/dns-query]
-    '+.sankuai.com': [https://dns.alidns.com/dns-query]
-    '+.meituanwaimai.com': [https://dns.alidns.com/dns-query]
-    '+.meituanzhongbao.com': [https://dns.alidns.com/dns-query]
+    '+.meituan.com': ['https://dns.alidns.com/dns-query']
+    '+.meituan.net': ['https://dns.alidns.com/dns-query']
+    '+.sankuai.com': ['https://dns.alidns.com/dns-query']
+    '+.meituanwaimai.com': ['https://dns.alidns.com/dns-query']
+    '+.meituanzhongbao.com': ['https://dns.alidns.com/dns-query']
     #KuGou
-    '+.kugou.com': [https://dns.alidns.com/dns-query]
-    '+.kugou.net': [https://dns.alidns.com/dns-query]
-    '+.kgimg.com': [https://dns.alidns.com/dns-query]
-    '+.kglink.cn': [https://dns.alidns.com/dns-query]
-    '+.kugouaudio.com': [https://dns.alidns.com/dns-query]
-    '+.kugoustore.com': [https://dns.alidns.com/dns-query]
-    '+.kugouvoice.com': [https://dns.alidns.com/dns-query]
-    '+.kugouyouth.com': [https://dns.alidns.com/dns-query]
+    '+.kugou.com': ['https://dns.alidns.com/dns-query']
+    '+.kugou.net': ['https://dns.alidns.com/dns-query']
+    '+.kgimg.com': ['https://dns.alidns.com/dns-query']
+    '+.kglink.cn': ['https://dns.alidns.com/dns-query']
+    '+.kugouaudio.com': ['https://dns.alidns.com/dns-query']
+    '+.kugoustore.com': ['https://dns.alidns.com/dns-query']
+    '+.kugouvoice.com': ['https://dns.alidns.com/dns-query']
+    '+.kugouyouth.com': ['https://dns.alidns.com/dns-query']
 
   fallback:
     - https://dns.cloudflare.com/dns-query
