@@ -1,28 +1,6 @@
 name: Stash Beta Override
 category: Beta
 
-desc: |-
-  DNS｜Proxy Groups｜Rules
-  Version: 1.4｜2026-07-11
-  Encrypted DNS:
-   - DoH｜IPv6｜IPv4
-  Policy Groups:
-   - PROXY-Gate｛Custom/US/SG/HK/JP/EUR(UK-DE-FR-RU)}
-  Rules:
-   - Customize｜CN
-   - MATCH -> PROXY-Gate (Default Fallback)
-
-#!override
-
-mixed-port: 7890
-allow-lan: true
-bind-address: '*'
-mode: rule
-log-level: info
-external-controller: ':9090'
-unified-delay: true
-tcp-concurrent: true
-
 dns: #!replace
   enable: true
   respect-rules: true
@@ -40,19 +18,16 @@ dns: #!replace
     - https://dns.cloudflare.com/dns-query
     - https://dns.google/dns-query
     - https://dns.quad9.net/dns-query
-
-  proxy-server-nameserver:
-    - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
-    - tls://1.0.0.1:853
-    - tls://8.8.4.4:853
-    - tls://9.9.9.9:853
+    - https://8.8.8.8/dns-query
+    - https://1.1.1.1/dns-query
+    - https://9.9.9.9/dns-query
 
   direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
 
   nameserver-policy:
+    '+.t11-a.app': [tls://1.1.1.1:853]
     'dns.cloudflare.com': [1.1.1.1, 1.0.0.1]
     'dns.google': [8.8.8.8, 8.8.4.4]
     'dns.quad9.net': [9.9.9.9, 149.112.112.112]
