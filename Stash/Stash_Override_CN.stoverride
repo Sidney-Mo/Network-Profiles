@@ -62,17 +62,12 @@ dns: #!replace
     - https://dns.alidns.com/dns-query
     - https://dns.cloudflare.com/dns-query
     - https://dns.google/dns-query
-    - https://dns.quad9.net/dns-query
 
   proxy-server-nameserver:
     - https://dns.cloudflare.com/dns-query
     - https://dns.google/dns-query
-    - https://dns.quad9.net/dns-query
     - tls://1.1.1.1:853
     - tls://8.8.8.8:853
-    - tls://1.0.0.1:853
-    - tls://8.8.4.4:853
-    - tls://9.9.9.9:853
 
   direct-nameserver:
     - https://dns.alidns.com/dns-query
@@ -278,6 +273,12 @@ rules: #!replace
   - DST-PORT,993,DIRECT
   - DST-PORT,995,DIRECT
 
+  # Remote rule sets
+  - RULE-SET,AdvertisingLite,REJECT
+  - RULE-SET,Privacy,REJECT
+  - RULE-SET,ACL4SSR_BanAD,REJECT
+  - RULE-SET,ACL4SSR_BanProgramAD,REJECT
+
   # ========= Custom rules =========
 
   # Apple
@@ -345,14 +346,8 @@ rules: #!replace
 
   # ========= End of custom rules =========
 
-  # Remote rule sets
-  - RULE-SET,AdvertisingLite,REJECT
-  - RULE-SET,Privacy,REJECT
-  - RULE-SET,ACL4SSR_BanAD,REJECT
-  - RULE-SET,ACL4SSR_BanProgramAD,REJECT
-  - RULE-SET,ChinaMax,DIRECT
-
   # Bottom-up Routing Strategy
+  - RULE-SET,ChinaMax,DIRECT
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,PROXY-Gate
