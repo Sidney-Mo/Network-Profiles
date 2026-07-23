@@ -3,11 +3,11 @@ category: Beta
 
 desc: |-
   DNS｜Proxy Groups｜Rules
-  Version: 2.0｜2026-07-17
+  Version: 2.2｜2026-07-17
   Encrypted DNS:
    - DoH｜IPv6｜IPv4
   Policy Groups:
-   - PROXY-Gate｛Custom/US/SG/HK/TW/KR/JP/CA/EUR(UK-DE-FR-RU-IT-NL)}
+   - PROXY-Gate｛Custom/US/SG/HK/KR/JP/CA/EUR(UK-DE-FR-IT-NL)}
   Rules:
    - Customize｜CN
    - MATCH -> PROXY-Gate (Default Fallback)
@@ -24,13 +24,6 @@ unified-delay: true
 tcp-concurrent: true
 
 #===C30===#
-tun: #!replace
-  enable: true
-  stack: gvisor
-  auto-route: true
-  auto-detect-interface: true
-  dns-hijack:
-    - any:53
 
 dns: #!replace
   enable: true
@@ -46,11 +39,11 @@ dns: #!replace
     - 2400:3200::1
 
   nameserver:
-    - https://doh.pub/dns-query
     - https://dns.cloudflare.com/dns-query
     - https://dns.google/dns-query
     - https://dns.quad9.net/dns-query
 
+#===The following commands may be invalid===#
   proxy-server-nameserver:
     - tls://1.1.1.1:853
     - tls://8.8.8.8:853
@@ -66,6 +59,14 @@ dns: #!replace
     'dns.quad9.net': ['9.9.9.9', '149.112.112.112']
     'dns.alidns.com': ['223.5.5.5', '223.6.6.6']
     'doh.pub': ['1.12.12.12', '120.53.53.53']
+    '+.ctcxianyu.com': ['https://38.76.213.238:8080/dns-query']
+    '+.525536.xyz': ['https://38.76.213.238:8080/dns-query']
+    '+.t11-a.app': ['https://dns.alidns.com/dns-query', 'https://doh.pub/dns-query']
+    '+.t202511-n.icu': ['https://dns.alidns.com/dns-query', 'https://doh.pub/dns-query']
+    '+.163.com': ['https://dns.alidns.com/dns-query']
+    '+.126.com': ['https://dns.alidns.com/dns-query']
+    '+.126.net': ['https://dns.alidns.com/dns-query']
+    '+.netease.com': ['https://dns.alidns.com/dns-query']
 
   fallback:
     - https://dns.cloudflare.com/dns-query
@@ -117,8 +118,8 @@ proxy-groups: #!replace
       - 🇸🇬 SG-Auto
       - 🇭🇰 HK-Auto
       - 🇯🇵 JP-Auto
-      - 🇰🇷 KR-Auto
-      - 🇨🇦 CA-Auto
+      - 🇰🇷 KR-Auto-F
+      - 🇨🇦 CA-Auto-F
       - DIRECT
 
   - name: 🌎 Custom-Manual
@@ -130,12 +131,11 @@ proxy-groups: #!replace
     type: select
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Europe_Map.png
     proxies:
-      - 🇬🇧 UK-Auto
-      - 🇩🇪 DE-Auto
-      - 🇫🇷 FR-Auto
-      - 🇷🇺 RU-Auto
-      - 🇮🇹 IT-Auto
-      - 🇳🇱 NL-Auto
+      - 🇬🇧 UK-Auto-F
+      - 🇩🇪 DE-Auto-F
+      - 🇫🇷 FR-Auto-F
+      - 🇮🇹 IT-Auto-F
+      - 🇳🇱 NL-Auto-F
 
   - name: 🇺🇸 US-Auto
     type: url-test
@@ -153,7 +153,7 @@ proxy-groups: #!replace
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Singapore.png
     filter: '(?i)(\[SG\]|^SG$|Singapore|\bSG\b|新加坡|狮城)'
     url: http://www.gstatic.com/generate_204
-    interval: 600
+    interval: 900
     timeout: 15
     tolerance: 50
 
@@ -177,8 +177,8 @@ proxy-groups: #!replace
     timeout: 15
     tolerance: 50
 
-  - name: 🇰🇷 KR-Auto
-    type: url-test
+  - name: 🇰🇷 KR-Auto-F
+    type: fallback
     include-all: true
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Korea.png
     filter: '(?i)(\[KR\]|^KR$|Korea|South Korea|\bKR\b|韩国|首尔|Seoul)'
@@ -187,8 +187,8 @@ proxy-groups: #!replace
     timeout: 15
     tolerance: 50
 
-  - name: 🇨🇦 CA-Auto
-    type: url-test
+  - name: 🇨🇦 CA-Auto-F
+    type: fallback
     include-all: true
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Canada.png
     filter: '(?i)(\[CA\]|^CA$|Canada|加拿大|Toronto|Vancouver|Montreal)'
@@ -198,63 +198,53 @@ proxy-groups: #!replace
     tolerance: 50
 
   #EUR-Manual
-  - name: 🇬🇧 UK-Auto
-    type: url-test
+  - name: 🇬🇧 UK-Auto-F
+    type: fallback
     include-all: true
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Europe_Map.png
     filter: '(?i)(?!.*Ukraine)(\[UK\]|^UK$|United Kingdom|Britain|\bUK\b|英国|伦敦)'
     url: http://www.gstatic.com/generate_204
-    interval: 1200
+    interval: 900
     timeout: 15
     tolerance: 50
 
-  - name: 🇩🇪 DE-Auto
-    type: url-test
+  - name: 🇩🇪 DE-Auto-F
+    type: fallback
     include-all: true
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Europe_Map.png
     filter: '(?i)(\[DE\]|^DE$|Germany|Deutschland|\bDE\b|德国|法兰克福)'
     url: http://www.gstatic.com/generate_204
-    interval: 1200
+    interval: 900
     timeout: 15
     tolerance: 50
 
-  - name: 🇫🇷 FR-Auto
-    type: url-test
+  - name: 🇫🇷 FR-Auto-F
+    type: fallback
     include-all: true
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Europe_Map.png
     filter: '(?i)(\[FR\]|^FR$|France|\bFR\b|法国|巴黎)'
     url: http://www.gstatic.com/generate_204
-    interval: 1200
+    interval: 900
     timeout: 15
     tolerance: 50
 
-  - name: 🇷🇺 RU-Auto
-    type: url-test
+  - name: 🇮🇹 IT-Auto-F
+    type: fallback
     include-all: true
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Europe_Map.png
-    filter: '(?i)(\[RU\]|^RU$|Russia|Russian|Federation|\bRU\b|俄罗斯|莫斯科|伯力)'
+    filter: '(?i)(\[IT\]|^IT$|Italy|Italian|\bIT\b|意大利|米兰|罗马|Milan|Rome)'
     url: http://www.gstatic.com/generate_204
-    interval: 1200
+    interval: 900
     timeout: 15
     tolerance: 50
 
-  - name: 🇮🇹 IT-Auto
-    type: url-test
-    include-all: true
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Europe_Map.png
-    filter: '(?i)(\[IT\]|^IT$|Italy|Italian|\bIT\b|意大利|米兰|罗马)'
-    url: http://www.gstatic.com/generate_204
-    interval: 1200
-    timeout: 15
-    tolerance: 50
-
-  - name: 🇳🇱 NL-Auto
-    type: url-test
+  - name: 🇳🇱 NL-Auto-F
+    type: fallback
     include-all: true
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Europe_Map.png
     filter: '(?i)(\[NL\]|^NL$|Netherlands|Holland|\bNL\b|荷兰|阿姆斯特丹|Amsterdam)'
     url: http://www.gstatic.com/generate_204
-    interval: 1200
+    interval: 900
     timeout: 15
     tolerance: 50
 
@@ -414,6 +404,7 @@ rules: #!replace
   # NetEase Mail
   - DOMAIN-SUFFIX,126.com,DIRECT
   - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,126.net,DIRECT
   - DOMAIN-SUFFIX,netease.com,DIRECT
   # UnionPay
   - DOMAIN-SUFFIX,95516.com,DIRECT
